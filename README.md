@@ -6,3 +6,4 @@ Prepopulated quiz app study of mine. Contains:
   4. LiveData works in ViewModel
   5. Custom SharedPreferences
   6. MVVM Architecture
+  7. Fragments - Navigation graph
