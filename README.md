@@ -7,4 +7,4 @@ Prepopulated quiz app study of mine. Contains:
   5. Custom SharedPreferences
   6. MVVM Architecture
   7. Fragments - Navigation graph
-  8. Shared ViewmModel
+  8. Shared ViewModel
