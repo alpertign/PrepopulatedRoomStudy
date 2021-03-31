@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <variable
+            name="question"
+            type="com.alpertign.prepopulatedroomstudy5.model.Question" />
 
     </data>
 
@@ -19,14 +22,64 @@
             android:id="@+id/btn_random_question"
             android:layout_margin="10dp"></Button>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Details"
+            android:id="@+id/btn_details"
+            android:layout_margin="10dp"></Button>
+
         <!-- TODO: Update blank fragment layout -->
         <TextView
             android:id="@+id/tv_question"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment"
+            android:layout_height="200dp"
+            android:text="@{question.queString}"
             android:layout_margin="10dp"
+            android:background="@color/teal_200"
             android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_optA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{question.optA}"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:background="@color/teal_200"/>
+
+        <TextView
+            android:id="@+id/tv_optB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{question.optB}"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:background="@color/teal_200"/>
+        <TextView
+            android:id="@+id/tv_optC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{question.optC}"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:background="@color/teal_200"/>
+        <TextView
+            android:id="@+id/tv_optD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{question.optD}"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:background="@color/teal_200"/>
 
     </LinearLayout>
 </layout>

@@ -18,5 +18,9 @@
         android:id="@+id/detailsFragment"
         android:name="com.alpertign.prepopulatedroomstudy5.view.DetailsFragment"
         android:label="fragment_details"
-        tools:layout="@layout/fragment_details" />
+        tools:layout="@layout/fragment_details" >
+        <action
+            android:id="@+id/action_detailsFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+    </fragment>
 </navigation>

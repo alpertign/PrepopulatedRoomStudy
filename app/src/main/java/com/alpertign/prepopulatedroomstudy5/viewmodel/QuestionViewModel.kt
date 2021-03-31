@@ -10,16 +10,17 @@ import kotlinx.coroutines.launch
 
 class QuestionViewModel(application: Application) : BaseViewModel(application) {
 
-    val questionLiveData = MutableLiveData<Question>()
+    private var questionLiveData = MutableLiveData<Question>()
     private var customPreferences = CustomSharedPreferences(getApplication())
     val savedRecord = getRecordFromSharedPreferences()
     var score : Int? = 0
     var randomGeneratedId: Int = 1
 
-    fun getDataFromRoom(){
-        val question = Question("Adım Alperen","Adım ne?","Alperen","George","John","Michael","Alperen")
-        questionLiveData.value = question
-    }
+
+
+
+
+
 
     fun getRandomQuestionFromRoom(){
         launch {
@@ -29,6 +30,13 @@ class QuestionViewModel(application: Application) : BaseViewModel(application) {
             questionLiveData.value = question
         }
 
+    }
+
+    fun getQuestionById(id: Int){
+        launch {
+            val question = QuestionDatabase(getApplication()).questionDao().getQuestion(id)
+            questionLiveData.value = question
+        }
     }
 
 
