@@ -1,6 +1,7 @@
 package com.alpertign.prepopulatedroomstudy5.viewmodel
 
 import android.app.Application
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.alpertign.prepopulatedroomstudy5.model.Question
@@ -10,11 +11,13 @@ import kotlinx.coroutines.launch
 
 class QuestionViewModel(application: Application) : BaseViewModel(application) {
 
-    private var questionLiveData = MutableLiveData<Question>()
+    private var questionLiveData = MutableLiveData<Question>(Question("You are the best!","Who is the best?","I","They","He","She","I"))
     private var customPreferences = CustomSharedPreferences(getApplication())
     val savedRecord = getRecordFromSharedPreferences()
     var score : Int? = 0
     var randomGeneratedId: Int = 1
+
+    val currentQuestion: LiveData<Question> = questionLiveData
 
 
 

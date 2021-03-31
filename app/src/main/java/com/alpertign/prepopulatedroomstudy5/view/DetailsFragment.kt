@@ -53,7 +53,7 @@ class DetailsFragment : Fragment() {
 
 
     private fun observeLiveData(){
-        viewModel.questionLiveData.observe(viewLifecycleOwner, Observer { question ->
+        viewModel.currentQuestion.observe(viewLifecycleOwner, Observer { question ->
             question?.let {
                 dataBinding.question = question
             }
